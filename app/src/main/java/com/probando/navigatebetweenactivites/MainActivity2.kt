@@ -1,6 +1,7 @@
 package com.probando.navigatebetweenactivites
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.probando.navigatebetweenactivites.databinding.ActivityMain2Binding
@@ -16,7 +17,9 @@ class MainActivity2 : AppCompatActivity() {
         val user = intentExtra.getStringExtra("user")
         binding.tv.text = user
 
-        binding.bt.setOnClickListener { this.finish() }
+        binding.bt.setOnClickListener {
+            binding.activity2.setBackgroundColor(Color.LTGRAY)
+        }
 
     }
 }
